@@ -16,7 +16,7 @@ commandSyntax = '$o'
 #
 # See: https://docs.replit.com/programming-ide/storing-sensitive-information-environment-variables
 # for more information.
-botToken = "OTU2MDA2MzI3MjY2NzE3NzY2.Yjp8Rg.I_kietkQSaCfXCH8YzanwT_G1_Q" # DO NOT LET THIS BE PUBLIC!!
+botToken = "" # DO NOT LET THIS BE PUBLIC!!
 
 # Should NSFW content be allowed on this instance?
 NSFW = False
