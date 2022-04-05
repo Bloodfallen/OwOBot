@@ -87,7 +87,7 @@ async def on_message(message):
   if message.author == client.user:
     return
   if message.content.startswith(commandSyntax + " help"):
-      await message.channel.send("Hi there! (* ^ ω ^)\nHere's a list of commands you can use!\n```help: Displays this message\nneko: Post a random (Safe) image of a neko!\nping: Pong!```")
+      await message.channel.send("Hi there! (* ^ ω ^)\nHere's a list of commands you can use!\n```help: Displays this message\nneko: Post a random (Safe) image of a neko!\nping: Pong!\nlewd <type>: Post a specific type of lewd!\nPossible options for this command are: solog, smug, feet, lewdkemo, woof, gasm, solo, 8ball, goose, cuddle, avatar, cum, slap, les, erokemo, bj, pwankg, ero, hololewd, pat, gecg, holo, poke, feed, fox_girl, tits, nsfw_neko_gif, eroyuri, holoero, pussy, random_hentai_gif, lizard, yuri, keta, neko, hentai, feetg, eron, erok, baka, kemonomimi, hug, cum_jpg, nsfw_avatar, erofeet, meow, kiss, wallpaper, tickle, blowjob, spank, kuni, classic, waifu, femdom, boobs, trap, lewd, pussy_jpg, anal, futanari, ngif, lewdk```")
   if message.content.startswith(commandSyntax + " ping"):
     # Simple ping command. Used to confirm Bot is online.
     await message.channel.send('Pong!')
@@ -102,6 +102,18 @@ async def on_message(message):
       typeToUse = message.content.lstrip(commandSyntax + " lewd")
       img = getNSFWByType(typeToUse)
       await message.channel.send(img)
+  # Maybe a purge command? ;o
+  if message.content.startswith(commandSyntax + " purge"):
+    amountToClear = message.content.lstrip(commandSyntax + " purge")
+    if(message.author.guild_permissions.administrator):
+      # The user is admin, purge stuff
+      # await message.channel.send("U R ADMIN")
+      await message.channel.purge(limit=int(amountToClear))
+      await message.channel.send("Purged " + amountToClear + " messages!")
+
+    else:
+      # The user is not admin, scold them! >_>
+      await message.channel.send("U NOT ADMIN")
 # Check if `botToken` is defined.
 if botToken == "":
   # If botToken is not defined, we'll assume we're using replit, and pull our token from the TOKEN Environment Variable.

@@ -1,5 +1,5 @@
 commandSyntax = "$o" # What syntax should be used to call upon the bot?
-NSFW = False # Allow the bot to post NSFW content?
+NSFW = True # Allow the bot to post NSFW content?
 EnhancedLogging = True # Enable enhanced logging? (Defined below)
 
 #
