@@ -23,7 +23,7 @@ To install and run this bot, do the following:
 1. Create a new folder somewhere you won't forget, then using a terminal, open a command prompt.
 2. `git clone https://github.com/Bloodfallen/OwOBot.git .`
 3. Run the following commands:
-```
+```bash
 python -m pip install aiohttp
 python -m pip install discord
 python -m pip install requests
