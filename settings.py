@@ -1,7 +1,8 @@
 commandSyntax = "$o" # What syntax should be used to call upon the bot?
 NSFW = True # Allow the bot to post NSFW content?
 EnhancedLogging = True # Enable enhanced logging? (Defined below)
-
+EnableHubDoujin = True # Allow users to grab doujins from The Hub? Searching will be unavailable without Authentication.
+EnablePancrabit = True # Pancrabit ^_^
 #
 #   Enhanced logging allows for logging extra information to the console, this could be any of the following,
 #   but is not limited to it.
